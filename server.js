@@ -11,12 +11,15 @@ const PORT = process.env.PORT || 3300;
 //Assets
 
 app.use(express.static('public'))
-
+app.use('/favicon.ico', express.static('/public/favicon.ico'));
 
 //Page path render
 app.get('/', (req,res) => {
     res.render('home')
 })
+
+//favicon
+
 
 
 //set Templates engine
@@ -28,3 +31,5 @@ app.set('view engine', 'ejs');
 app.listen(PORT, () => {
     console.log(`listening on port ${PORT}`);
 })
+
+
