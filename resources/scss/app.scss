@@ -1,4 +1,7 @@
 @import './variables';
+@import '~noty/src/noty.scss';
+@import '~noty/src/themes/mint.scss';
+
 
 body{
     font-family: 'Lato', sans-serif;
@@ -28,7 +31,7 @@ section.hero{
     background: $secondary;
 }
 
-.add_to_cart{
+.add-to-cart{
     border: 2px solid $primary;
     color: $primary;
     transition: $smooth;
@@ -37,6 +40,9 @@ section.hero{
         background: $primary;
         color: $pure;
         border-color: $pure;
+    }
+    &:focus{
+        outline: none;
     }
 }
 
@@ -63,4 +69,9 @@ section.login{
             color: $primary-hover;
         }
     }
+}
+
+.noty_theme__mint{
+    border-radius: 50px !important;
+    padding: 8px !important;
 }
